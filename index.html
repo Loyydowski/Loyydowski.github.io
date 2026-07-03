@@ -1,11 +1,359 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bartosz Kuba — Frontend Developer</title>
+  <meta name="description" content="Portfolio i CV Bartosza Kuby — Frontend Developer specjalizujący się w JavaScript, Angular i tworzeniu rozszerzeń Chrome z integracją AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <nav class="nav" id="main-nav" role="navigation" aria-label="Główna nawigacja">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo" id="nav-logo">BK<span class="nav__logo-dot">.</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="#about" class="nav__link" id="nav-about">O mnie</a></li>
+        <li><a href="#skills" class="nav__link" id="nav-skills">Umiejętności</a></li>
+        <li><a href="#projects" class="nav__link" id="nav-projects">Projekty</a></li>
+        <li><a href="#contact" class="nav__link" id="nav-contact">Kontakt</a></li>
+      </ul>
+      <button class="nav__menu-btn" id="menu-toggle" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#about" class="mobile-menu__link" id="mob-about">O mnie</a></li>
+      <li><a href="#skills" class="mobile-menu__link" id="mob-skills">Umiejętności</a></li>
+      <li><a href="#projects" class="mobile-menu__link" id="mob-projects">Projekty</a></li>
+      <li><a href="#contact" class="mobile-menu__link" id="mob-contact">Kontakt</a></li>
+    </ul>
+  </div>
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <div class="hero__badge" id="hero-badge">
+          <span class="hero__badge-dot"></span>
+          Dostępny do pracy
+        </div>
+        <h1 class="hero__title" id="hero-title">
+          Bartosz <span class="hero__title-accent">Kuba</span>
+        </h1>
+        <p class="hero__subtitle">Frontend Developer</p>
+        <p class="hero__description">
+          Tworzę nowoczesne aplikacje webowe i narzędzia z integracją AI.<br />
+          Pasjonuję się czystym kodem, efektywnymi rozwiązaniami i UX.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" id="cta-projects">Zobacz projekty</a>
+          <a href="#contact" class="btn btn--ghost" id="cta-contact">Skontaktuj się</a>
+        </div>
+        <div class="hero__socials">
+          <a href="https://github.com/Loyydowski" target="_blank" rel="noopener noreferrer" class="social-link" id="social-github" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/bartosz-kuba-0a4b913a4/" target="_blank" rel="noopener noreferrer" class="social-link" id="social-linkedin" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__card">
+          <div class="hero__card-header">
+            <div class="hero__card-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="hero__card-title">portfolio.js</span>
+          </div>
+          <pre class="hero__code"><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">"Bartosz Kuba"</span>,
+  <span class="code-prop">role</span>: <span class="code-str">"Frontend Dev"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-str">"JavaScript"</span>,
+    <span class="code-str">"Angular"</span>,
+    <span class="code-str">"TypeScript"</span>,
+    <span class="code-str">"AI Integration"</span>
+  ],
+  <span class="code-prop">available</span>: <span class="code-bool">true</span>
+};</code></pre>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </section>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-label">01 — O mnie</div>
+        <h2 class="section-title" id="about-title">Kim jestem?</h2>
+        <div class="about__grid">
+          <div class="about__text">
+            <p>
+              Jestem <strong>Frontend Developerem</strong> z pasją do tworzenia nowoczesnych aplikacji webowych. 
+              Specjalizuję się w <strong>JavaScripcie</strong>, <strong>Angular</strong> i integracji z modelami AI.
+            </p>
+            <p>
+              Interesuję się analizą struktury DOM, automatyzacją i tworzeniem narzędzi 
+              developerskich. Lubię rozwiązywać nieoczywiste problemy techniczne i pisać 
+              kod, który jest czytelny i efektywny.
+            </p>
+            <p>
+              Aktywnie szukam nowych możliwości — zarówno do współpracy projektowej, 
+              jak i zatrudnienia jako junior/mid frontend developer.
+            </p>
+          </div>
+          <div class="about__stats">
+            <div class="stat-card" id="stat-projects">
+              <div class="stat-card__number">2+</div>
+              <div class="stat-card__label">Projekty Open Source</div>
+            </div>
+            <div class="stat-card" id="stat-stars">
+              <div class="stat-card__number">3★</div>
+              <div class="stat-card__label">Gwiazdki na GitHub</div>
+            </div>
+            <div class="stat-card" id="stat-tech">
+              <div class="stat-card__number">5+</div>
+              <div class="stat-card__label">Technologii</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-label">02 — Umiejętności</div>
+        <h2 class="section-title" id="skills-title">Stack technologiczny</h2>
+        <div class="skills__grid">
+
+          <div class="skill-group" id="skill-frontend">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon">⚡</span> Frontend
+            </h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <span class="skill-item__name">JavaScript</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 85%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">TypeScript</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 70%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">Angular</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 70%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">HTML / CSS / SCSS</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 90%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-group" id="skill-tools">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon">🛠</span> Narzędzia
+            </h3>
+            <ul class="skill-list" role="list">
+              <li class="skill-item">
+                <span class="skill-item__name">Git / GitHub</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">Chrome Extensions API</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 75%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">DOM Analysis</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 80%"></div>
+                </div>
+              </li>
+              <li class="skill-item">
+                <span class="skill-item__name">AI / LLM API</span>
+                <div class="skill-item__bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                  <div class="skill-item__fill" style="--w: 65%"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skill-tags-group" id="skill-other">
+            <h3 class="skill-group__title">
+              <span class="skill-group__icon">🎯</span> Pozostałe
+            </h3>
+            <div class="skill-tags">
+              <span class="tag">Regex</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Open Source</span>
+              <span class="tag">Webpack</span>
+              <span class="tag">npm</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">JSON</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-label">03 — Projekty</div>
+        <h2 class="section-title" id="projects-title">Moje projekty</h2>
+        <div class="projects__grid">
+          <article class="project-card" id="project-test-solver">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/test_solver.png"
+                alt="Podgląd interfejsu rozszerzenia Test Solver"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay">
+                <a href="https://github.com/Loyydowski/Test-Solver-Open-Source" target="_blank" rel="noopener noreferrer" class="btn btn--sm" id="proj1-github">
+                  Zobacz na GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__type">Chrome Extension</span>
+                <div class="project-card__stars" aria-label="2 gwiazdki">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
+                  2
+                </div>
+              </div>
+              <h3 class="project-card__title">Test Solver</h3>
+              <p class="project-card__desc">
+                Otwartoźródłowa wtyczka do Chrome, która automatycznie wykrywa pytania quizowe 
+                na platformie <strong>Testportal.pl</strong> i przy pomocy modelu AI podpowiada 
+                poprawne odpowiedzi. Obsługuje pytania zamknięte (ABCD) oraz otwarte.
+              </p>
+              <ul class="project-card__features">
+                <li>Integracja z API modeli AI (OpenAI / lokalny LLM)</li>
+                <li>Analiza struktury DOM quizu w czasie rzeczywistym</li>
+                <li>System antycheat — neutralizacja ostrzeżeń</li>
+                <li>Wizualizacja odpowiedzi (zielone podświetlenie)</li>
+              </ul>
+              <div class="project-card__techs">
+                <span class="tech-badge">JavaScript</span>
+                <span class="tech-badge">Chrome API</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">AI/LLM</span>
+              </div>
+              <a href="https://github.com/Loyydowski/Test-Solver-Open-Source" target="_blank" rel="noopener noreferrer" class="project-card__link" id="proj1-link">
+                github.com/Loyydowski/Test-Solver-Open-Source
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+              </a>
+            </div>
+          </article>
+          <article class="project-card" id="project-car-hub">
+            <div class="project-card__image-wrap">
+              <img
+                src="assets/car_hub.png"
+                alt="Podgląd aplikacji Car Hub"
+                class="project-card__image"
+                loading="lazy"
+              />
+              <div class="project-card__overlay">
+                <a href="https://github.com/Loyydowski/Car-Hub" target="_blank" rel="noopener noreferrer" class="btn btn--sm" id="proj2-github">
+                  Zobacz na GitHub
+                </a>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__meta">
+                <span class="project-card__type">Angular SPA</span>
+                <div class="project-card__stars" aria-label="1 gwiazdka">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
+                  1
+                </div>
+              </div>
+              <h3 class="project-card__title">Car Hub</h3>
+              <p class="project-card__desc">
+                Nowoczesna aplikacja webowa typu SPA zbudowana w <strong>Angular</strong> 
+                z użyciem TypeScript i SCSS. Platforma do przeglądania i odkrywania 
+                samochodów z eleganckim, responsywnym interfejsem.
+              </p>
+              <ul class="project-card__features">
+                <li>Single Page Application w Angularze</li>
+                <li>Dynamiczne renderowanie danych o autach</li>
+                <li>Responsywny design z SCSS</li>
+                <li>Czysta architektura komponentowa</li>
+              </ul>
+              <div class="project-card__techs">
+                <span class="tech-badge">Angular</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">SCSS</span>
+                <span class="tech-badge">HTML</span>
+              </div>
+              <a href="https://github.com/Loyydowski/Car-Hub" target="_blank" rel="noopener noreferrer" class="project-card__link" id="proj2-link">
+                github.com/Loyydowski/Car-Hub
+                <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042L9.94 8 6.22 4.28a.75.75 0 0 1 0-1.06Z"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-label">04 — Kontakt</div>
+        <h2 class="section-title" id="contact-title">Skontaktuj się</h2>
+        <p class="contact__subtitle">
+          Szukasz Frontend Developera? Chętnie porozmawiam o współpracy!
+        </p>
+        <div class="contact__cards">
+          <a href="https://www.linkedin.com/in/bartosz-kuba-0a4b913a4/" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-linkedin">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__label">LinkedIn</div>
+              <div class="contact-card__value">Bartosz Kuba</div>
+            </div>
+            <div class="contact-card__arrow">→</div>
+          </a>
+          <a href="https://github.com/Loyydowski" target="_blank" rel="noopener noreferrer" class="contact-card" id="contact-github">
+            <div class="contact-card__icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </div>
+            <div class="contact-card__info">
+              <div class="contact-card__label">GitHub</div>
+              <div class="contact-card__value">Loyydowski</div>
+            </div>
+            <div class="contact-card__arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>© 2026 Bartosz Kuba - Zaprojektowane i zbudowane z ❤️</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
