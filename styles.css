@@ -18,10 +18,10 @@
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 6rem;
-  --space-2xl: 8rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5rem;
 
   --page-max: 1200px;
   --page-gutter: clamp(1rem, 4vw, 2rem);
@@ -236,4 +236,23 @@ ul { list-style: none; }
 @media (max-width: 640px) {
   .spec-row { grid-template-columns: 1fr; gap: var(--space-xs); padding: 1rem 0; }
   .foot-stmt__meta { flex-direction: column; gap: var(--space-sm); align-items: flex-start; }
+}
+.foot-stmt__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.foot-stmt__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  color: var(--color-accent);
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: border-color 200ms, color 200ms;
+}
+.foot-stmt__email:hover {
+  border-color: var(--color-accent);
 }
